@@ -23,7 +23,7 @@ elsif memo_type == "2"
     p "メモしたい内容を記入してください"
     p "完了したらCtrl+Dをおします"
     memo_content = $stdin.read
-    CSV.open("#{file_name}.csv",'w') do |csv|
+    CSV.open("#{file_name}.csv",'a') do |csv|
         csv << ["#{memo_content}"]        
     end
 else
